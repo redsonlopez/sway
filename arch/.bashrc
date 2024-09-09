@@ -31,5 +31,3 @@ YELLOW="\[\033[0;38;5;226m\]"
 RESET_COLOR="\[\033[0;0m\]"
 PS1="$ORANGE\w$YELLOW\$(parse_git_branch)$RESET_COLOR\$ "
 
-export BROWSER=falkon
-
