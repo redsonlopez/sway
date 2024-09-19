@@ -19,8 +19,10 @@ $ nvim ~/.config/sway/config
 $ nvim ~/.config/qutebrowser/config.py
 $ nvim /usr/share/doc/i3status-rust/examples/config.toml
 -> Firefox
-$ mkdir -p ~/.mozilla/firefox/*.default/chrome
-$ nvim ~/.mozilla/firefox/*.default/chrome/userChrome.css
+in firefox about:support
+> Profile Directory = <*.default>
+$ mkdir -p ~/.mozilla/firefox/<*.default>/chrome
+$ nvim ~/.mozilla/firefox/<*.default>/chrome/userChrome.css
 #tabbrowser-tabs {
     display: none !important;
 }
