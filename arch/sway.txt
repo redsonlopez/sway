@@ -18,6 +18,13 @@ $ nvim ~/.config/foot/foot.ini
 $ nvim ~/.config/sway/config
 $ nvim ~/.config/qutebrowser/config.py
 $ nvim /usr/share/doc/i3status-rust/examples/config.toml
+-> Firefox
+$ mkdir -p ~/.mozilla/firefox/*.default/chrome
+$ nvim or touch ~/.mozilla/firefox/*.default/chrome/userChrome.css
+#tabbrowser-tabs {
+    display: none !important;
+}
+in firefox: toolkit.legacyUserProfileCustomizations.stylesheets = true
 -------> Git Config ->
 $ ssh-keygen -t rsa -b 4096 -C "redsonlopez@gmail.com"
 $ eval "$(ssh-agent -s)"
