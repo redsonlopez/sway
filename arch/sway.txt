@@ -1,11 +1,11 @@
 https://wiki.archlinux.org/title/Sway#Configuration
 -------> Config ->
-$ sudo pacman -S neovim git tree
+$ sudo pacman -S neovim wl-clipboard git tree
 $ sudo pacman -S i3status-rust ttf-font-awesome
 ->
 $ mkdir ~/Projects
 $ cd ~/Projects
-$ git clone git@github.com:redsonlopez/sway.git
+$ git clone https://github.com/redsonlopez/sway.git
 $ cd ~/Projects/sway/arch
 $ sudo cp .bashrc ~/.bashrc
 $ sudo cp config.toml /usr/share/doc/i3status-rust/examples
@@ -35,10 +35,37 @@ $ deactivate
 $ sudo pacman -Syu
 $ su -
 -------> ScreenShare ->
-$ sudo pacman -S xdg-desktop-portal
-$ sudo pacman -S xdg-desktop-portal-wlr
-$ sudo pacman -S pipewire-media-session
--> Troubleshooting
+$ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-wlr pipewire-media-session
+-------> CPU Power ->
+$ systemctl list-unit-files --state=enabled
+$ echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.d/99-sysctl.conf
+$ sudo pacman -S cpupower
+$ sudo systemctl enable cpupower
+$ sudo cpupower frequency-set -g powersave
+$ top
+-------> Connecting ->
+$ sudo nano /etc/resolv.conf
+nameserver 1.1.1.1
+nameserver 8.8.8.8 # Google
+$ sudo chattr +i /etc/resolv.conf
+$ sudo ip link set dev wlan0 mtu 1492
+->
+$ sudo nano /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet splash tcp_bbr ipv6.disable=1"
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+$ sudo modprobe tcp_bbr
+$ echo "tcp_bbr" | sudo tee -a /etc/modules-load.d/modules.conf
+->
+$ sudo nano /etc/sysctl.d/99-sysctl.conf
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+$ sudo sysctl -p
+-> Old
+$ sudo nvim /etc/hostname
+$ sudo nvim /etc/hosts
+$ sudo nvim /etc/environment
+------->ScreenShare Troubleshooting
 $ systemctl --user show-environment | grep -E 'XDG_CURRENT_DESKTOP|WAYLAND_DISPLAY'
 $ systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
 $ dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP=sway
@@ -48,18 +75,6 @@ exec dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP=sway
 $ swaymsg exit
 $ systemctl --user restart xdg-desktop-portal-wlr
 $ systemctl --user status xdg-desktop-portal-wlr
--------> CPU Power ->
-$ systemctl list-unit-files --state=enabled
-$ echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.d/99-sysctl.conf
-$ sudo pacman -S cpupower
-$ sudo systemctl enable cpupower
-$ sudo cpupower frequency-set -g powersave
-$ top
--------> Connecting ->
-$ sudo nvim /etc/resolv.conf
-$ sudo nvim /etc/hostname
-$ sudo nvim /etc/hosts
-$ sudo nvim /etc/environment
 -------> WIFI ->
 $ iwctl
 $ device list
@@ -68,4 +83,3 @@ $ station <wlan> scan
 $ station <wlan> show
 $ station <wlan> get-networks
 $ station <wlan> connect <wifi>
-
