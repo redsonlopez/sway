@@ -20,12 +20,10 @@ $ nvim ~/.config/qutebrowser/config.py
 $ nvim /usr/share/doc/i3status-rust/examples/config.toml
 -> Firefox
 in firefox about:support
-> Profile Directory = <*.default>
-$ mkdir -p ~/.mozilla/firefox/<*.default>/chrome
-$ nvim ~/.mozilla/firefox/<*.default>/chrome/userChrome.css
-#tabbrowser-tabs {
-    display: none !important;
-}
+Search > Profile Directory = <directory123.default>
+$ mkdir -p ~/.mozilla/firefox/<directory123.default>/chrome
+$ nvim ~/.mozilla/firefox/<directory123.default>/chrome/userChrome.css
+#TabsToolbar { visibility: collapse !important; }
 in firefox about:config
 toolkit.legacyUserProfileCustomizations.stylesheets = true
 -------> Git Config ->
