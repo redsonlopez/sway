@@ -11,11 +11,12 @@ $ sudo cp .bashrc ~/.bashrc
 $ sudo cp config.toml /usr/share/doc/i3status-rust/examples
 $ sudo cp fedora34.jpg /usr/share/backgrounds
 $ cd ~/Projects/sway/arch/.config
-$ sudo cp -r nvim foot sway ~/.config
+$ sudo cp -r nvim foot sway qutebrowser ~/.config
 ->
 $ nvim ~/.config/nvim/init.vim
 $ nvim ~/.config/foot/foot.ini
 $ nvim ~/.config/sway/config
+$ nvim ~/.config/qutebrowser/config.py
 $ nvim /usr/share/doc/i3status-rust/examples/config.toml
 -------> Git Config ->
 $ ssh-keygen -t rsa -b 4096 -C "redsonlopez@gmail.com"
