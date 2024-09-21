@@ -1,7 +1,6 @@
 https://wiki.archlinux.org/title/Sway#Configuration
 -------> Config ->
-$ sudo pacman -S neovim wl-clipboard git tree
-$ sudo pacman -S i3status-rust ttf-font-awesome
+$ sudo pacman -S neovim wl-clipboard git i3status-rust ttf-font-awesome
 ->
 $ mkdir ~/Projects
 $ cd ~/Projects
@@ -11,7 +10,7 @@ $ sudo cp .bashrc ~/.bashrc
 $ sudo cp config.toml /usr/share/doc/i3status-rust/examples
 $ sudo cp fedora34.jpg /usr/share/backgrounds
 $ cd ~/Projects/sway/arch/.config
-$ sudo cp -r nvim foot sway qutebrowser ~/.config
+$ sudo cp -r nvim foot sway ~/.config
 ->
 $ nvim ~/.config/nvim/init.vim
 $ nvim ~/.config/foot/foot.ini
