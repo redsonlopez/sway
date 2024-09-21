@@ -4,10 +4,6 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-# Hedson
-# Screen Share
-#setenv WAYLAND_DISPLAY wayland-0
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -70,8 +66,8 @@ output * bg /usr/share/backgrounds/fedora34.jpg fill
 
     # Start web browser
     bindsym $mod+Shift+b exec qutebrowser
-    bindsym $mod+Shift+f exec GDK_BACKEND=wayland MOZ_ENABLE_WAYLAND=1 firefox
-    bindsym $mod+Shift+g exec chromium --enable-feature=UserOzonePlatform --ozone-platform=wayland --disable-ipv6
+    bindsym $mod+Shift+f exec firefox
+    bindsym $mod+Shift+g exec chromium --disable-ipv6
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -239,18 +235,7 @@ bar {
 # Borders
 default_border pixel 3
 smart_borders on
-#
-#client.focused 00000000 00000000 00000000 00000000
-#client.focused_inactive 00000000 00000000 00000000 00000000
-#client.unfocused 00000000 00000000 00000000 00000000
-
-# Screen capture
-#bindsym Print exec slurpshot
 
 # ## ###
 include /etc/sway/config.d/*
-
-# For steps of screenShare
-#exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
-#exec dbus-update-activation-environment --systemd XDG_CURRENT_DESKTOP=sway
 

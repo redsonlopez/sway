@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SNAPSHOT_DIR="/mnt/@.snapshots"
+SNAPSHOT_DIR="/mnt/.snapshots"
 BACKUP_DIR="/mnt/backup/snapshots"
 
 sudo btrfs send $SNAPSHOT_DIR/root_snapshot_ | sudo btrfs receive $BACKUP_DIR
