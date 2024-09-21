@@ -28,7 +28,7 @@ toolkit.legacyUserProfileCustomizations.stylesheets = true
 -------> ScreenShare ->
 $ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-wlr pipewire-media-session
 -------> Connecting ->
-$ sudo nano /etc/resolv.conf
+$ sudo nvim /etc/resolv.conf
 nameserver 1.1.1.1
 nameserver 8.8.8.8 # Google
 -------> Git Config ->
@@ -36,7 +36,7 @@ $ ssh-keygen -t rsa -b 4096 -C "redsonlopez@gmail.com"
 $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_rsa
 $ cat ~/.ssh/id_rsa.pub
-$ git clone git@github.com:redsonlopez/study_python.git
+$ git clone git@github.com:redsonlopez/study_python.git ~/Projects/study_python
 -------> Python ->
 $ sudo pacman -S python3
 $ python3 -m venv ~/Projects/.venv
