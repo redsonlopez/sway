@@ -25,8 +25,6 @@ $ nvim ~/.mozilla/firefox/<directory123.default>/chrome/userChrome.css
 #TabsToolbar { visibility: collapse !important; }
 in firefox about:config
 toolkit.legacyUserProfileCustomizations.stylesheets = true
--------> ScreenShare ->
-$ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-wlr pipewire-media-session
 -------> Connecting ->
 $ sudo nvim /etc/resolv.conf
 nameserver 1.1.1.1
@@ -73,6 +71,8 @@ $ sudo sysctl -p
 $ sudo nvim /etc/hostname
 $ sudo nvim /etc/hosts
 $ sudo nvim /etc/environment
+-------> ScreenShare ->
+$ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-wlr pipewire-media-session
 ------->ScreenShare Troubleshooting
 $ systemctl --user show-environment | grep -E 'XDG_CURRENT_DESKTOP|WAYLAND_DISPLAY'
 $ systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
