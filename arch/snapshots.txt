@@ -1,0 +1,8 @@
+$ mount | grep btrfs
+$ sudo btrfs subvolume list /
+$ sudo btrfs subvolume create /@root
+$ sudo btrfs subvolume delete /@root
+$ sudo btrfs subvolume snapshot / /.snapshots/root_snapshot_$(date +%Y-%m-%d)
+$ sudo btrfs subvolume delete /.snapshots/root_snapshot_2023-09-20
+$ cd /.snapshots
+
