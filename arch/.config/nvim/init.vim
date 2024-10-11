@@ -2,8 +2,23 @@
 set clipboard=unnamed,unnamedplus
 "let &clipboard = 'wl-clipboard'
 
-" Configuração para não exibir números de linha
-"set nonumber
+" Temas, sorbet é uma boa opção
+color vim
+
+" Configuração para cores serem bem aceitas no terminal
+set termguicolors
+
+" Fundo transparente
+"hi Normal ctermbg=none
+
+" Configuração para números de linha
+set number
+highlight LineNr guifg=#5c6370
+
+" Linha do cursor
+set cursorline
+highlight CursorLine guibg=#2c323c
+highlight CursorLineNr guifg=#888888
 
 " Ativar a coloração de sintaxe
 syntax on
@@ -20,12 +35,6 @@ syntax on
 
 " Mini barra
 set laststatus=0
-
-" Temas, sorbet é uma boa opção
-color vim
-
-" Fundo transparente
-"hi Normal ctermbg=none
 
 " Ativar a identação automática
 "filetype plugin indent on
