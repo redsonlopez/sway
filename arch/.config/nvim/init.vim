@@ -11,14 +11,17 @@ set termguicolors
 " Fundo transparente
 "hi Normal ctermbg=none
 
-" Configuração para números de linha
+" Configuração para exibir números das linhas
 set number
-highlight LineNr guifg=#5c6370
+" Cor dos números das linhas
+highlight LineNr guifg=#545454
+"Cor do número de linha do cursor
+highlight CursorLineNr guifg=#888888
 
 " Linha do cursor
 set cursorline
-highlight CursorLine guibg=#2c323c
-highlight CursorLineNr guifg=#888888
+" Cor da linha do cursor
+highlight CursorLine guibg=#2e2e2e
 
 " Ativar a coloração de sintaxe
 syntax on

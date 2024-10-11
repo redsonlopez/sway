@@ -14,11 +14,11 @@ $ sudo cp -r nvim foot sway ~/.config
 $ sudo mkdir -p /root/.config/nvim/
 $ sudo ln -s ~/.config/nvim/init.vim /root/.config/nvim/init.vim
 ->
-$ nvim ~/.config/nvim/init.vim
-$ nvim ~/.config/foot/foot.ini
-$ nvim ~/.config/sway/config
-$ nvim ~/.config/qutebrowser/config.py
-$ nvim /usr/share/doc/i3status-rust/examples/config.toml
+$ sudo nvim ~/.config/nvim/init.vim
+$ sudo nvim ~/.config/foot/foot.ini
+$ sudo nvim ~/.config/sway/config
+$ sudo nvim ~/.config/qutebrowser/config.py
+$ sudo nvim /usr/share/doc/i3status-rust/examples/config.toml
 -> Firefox
 in firefox about:support
 Search > Profile Directory = <directory123.default>
