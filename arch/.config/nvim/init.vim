@@ -2,29 +2,39 @@
 set clipboard=unnamed,unnamedplus
 "let &clipboard = 'wl-clipboard'
 
+" Configuração para codificação UTF-8
+set encoding=utf-8
+set termencoding=utf-8
+
 " Temas, sorbet é uma boa opção
 color vim
 
 " Configuração para cores serem bem aceitas no terminal
-set termguicolors
+"set termguicolors
 
 " Fundo transparente
 "hi Normal ctermbg=none
 
-" Configuração para exibir números das linhas
-set number
-" Cor dos números das linhas
-highlight LineNr guifg=#545454
-"Cor do número de linha do cursor
-highlight CursorLineNr guifg=#888888
-
-" Linha do cursor
-set cursorline
-" Cor da linha do cursor
-highlight CursorLine guibg=#2e2e2e
-
 " Ativar a coloração de sintaxe
 syntax on
+
+" Configurações para exibição de números das linhas
+set number				" Ativa a numeração das linhas
+highlight LineNr guifg=#545454		" Cor dos números das linhas
+highlight CursorLineNr guifg=#888888	" Cor do número de linha do cursor
+set numberwidth=6			" Ajusta a largura da coluna de números para 5 caracteres
+
+set cursorline				" Linha do cursor
+highlight CursorLine guibg=#2e2e2e	" Cor da linha do cursor 
+
+" Titulo
+set showtabline=2
+set tabline=\ \\ %f
+
+" Definir a cor de fundo da tabline para o fundo do terminal
+highlight TabLineFill guibg=#ffffff guifg=#222222
+highlight TabLine guibg=None guifg=None
+highlight TabLineSel guibg=None guifg=None
 
 " Configurações de pesquisa
 "set ignorecase
