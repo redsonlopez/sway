@@ -1,13 +1,14 @@
 " Configuração para clipboard
 set clipboard=unnamed,unnamedplus
-"let &clipboard = 'wl-clipboard'
 
 " Configuração para codificação UTF-8
 set encoding=utf-8
 set termencoding=utf-8
 
-" Temas, sorbet é uma boa opção
+" Temas. Dicas: vim, habamax, sorbet, wildcharm
 color vim
+highlight Normal guibg=#222222
+highlight MatchParen guifg=#ff79c6 guibg=None
 
 " Configuração para cores serem bem aceitas no terminal
 "set termguicolors
