@@ -29,12 +29,12 @@ highlight CursorLine guibg=#2e2e2e	" Cor da linha do cursor
 
 " Titulo
 set showtabline=2
-set tabline=\ \ %f
+highlight TabLineSel gui=bold,italic
+set tabline=%#TabLineSel#\ \ %f
 
 " Definir a cor de fundo da tabline para o fundo do terminal
 highlight TabLineFill guibg=#ffffff guifg=#222222
 highlight TabLine guibg=None guifg=None
-highlight TabLineSel guibg=None guifg=None
 
 " Configuração para desativar as linhas não utilizadas
 set fillchars=fold:\ ,eob:\ 
