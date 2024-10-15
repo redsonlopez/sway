@@ -5,40 +5,38 @@ set clipboard=unnamed,unnamedplus
 set encoding=utf-8
 set termencoding=utf-8
 
-" Temas. Dicas: vim, habamax, sorbet, wildcharm
-color vim
-highlight Normal guibg=#222222
-highlight MatchParen guifg=#ff79c6 guibg=None
-
-" Configuração para cores serem bem aceitas no terminal
-"set termguicolors
-
-" Fundo transparente
-"hi Normal ctermbg=none
-
 " Ativar a coloração de sintaxe
 syntax on
 
-" Configurações para exibição de números das linhas
-set number				" Ativa a numeração das linhas
-highlight LineNr guifg=#545454		" Cor dos números das linhas
-highlight CursorLineNr guifg=#888888	" Cor do número de linha do cursor
-set numberwidth=6			" Ajusta a largura da coluna de números para 5 caracteres
+" Configuração para cores serem bem aceitas independente do terminal
+set termguicolors
 
-set cursorline				" Linha do cursor
-highlight CursorLine guibg=#2e2e2e	" Cor da linha do cursor 
+" Configurações do tema
+color vim 						" Tema
+highlight Normal guibg=#222222 				" Cor de fundo
+highlight MatchParen gui=bold guifg=#ff79c6 guibg=None 	" Destaque de parênteses
 
-" Titulo
-set showtabline=2
-highlight TabLineSel gui=bold,italic
-set tabline=%#TabLineSel#\ \ %f
+set showtabline=2 					" Linha de título
+highlight TabLineSel gui=bold,italic			" Estilo da linha de título
+highlight TabLineSel guibg=#222222 guifg=#888888	" Estilo da linha de título
+set tabline=%#TabLineSel#\ \ %f			" Exibição da linha de título
 
-" Definir a cor de fundo da tabline para o fundo do terminal
-highlight TabLineFill guibg=#ffffff guifg=#222222
-highlight TabLine guibg=None guifg=None
+set number						" Ativa a numeração das linhas
+highlight LineNr guifg=#545454				" Cor dos números das linhas
+highlight CursorLineNr guifg=#888888			" Cor do número de linha do cursor
+set numberwidth=6					" Ajusta a largura da coluna de números para 5 caracteres
 
-" Configuração para desativar as linhas não utilizadas
+set cursorline						" Linha do cursor
+highlight CursorLine guibg=#2e2e2e			" Cor da linha do cursor 
+
+" Desativar linhas não utilizadas no final do arquivo
 set fillchars=fold:\ ,eob:\ 
+
+" Mini barra
+set laststatus=0
+
+" Ativar suporte para o mouse
+set mouse=a
 
 " Configurações de pesquisa
 "set ignorecase
@@ -49,9 +47,6 @@ set fillchars=fold:\ ,eob:\
 
 " Menu sobreposto
 "set wildmenu
-
-" Mini barra
-set laststatus=0
 
 " Ativar a identação automática
 "filetype plugin indent on
@@ -78,9 +73,6 @@ set laststatus=0
 
 " Titulo
 "set title
-
-" Ativar suporte para o mouse
-set mouse=a
 
 " Configuração para criar arquivos de backup e arquivos de troca
 "set backup
