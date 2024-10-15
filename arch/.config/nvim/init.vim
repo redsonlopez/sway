@@ -15,16 +15,20 @@ set termguicolors
 color vim 						" Tema
 highlight Normal guibg=#222222 				" Cor de fundo
 highlight MatchParen gui=bold guifg=#ff79c6 guibg=None 	" Destaque de parênteses
+highlight Comment gui=italic guifg=#808080		" Personalização dos Comentários
 
 set showtabline=2 					" Linha de título
-highlight TabLineSel gui=bold,italic			" Estilo da linha de título
-highlight TabLineSel guibg=#222222 guifg=#888888	" Estilo da linha de título
+highlight TabLineSel gui=bold,italic			" Pesronalização da linha de título
+highlight TabLineSel guibg=#222222 guifg=#888888	" Personalização da linha de título
 set tabline=%#TabLineSel#\ \ %f			" Exibição da linha de título
 
 set number						" Ativa a numeração das linhas
 highlight LineNr guifg=#545454				" Cor dos números das linhas
 highlight CursorLineNr guifg=#888888			" Cor do número de linha do cursor
-set numberwidth=6					" Ajusta a largura da coluna de números para 5 caracteres
+set numberwidth=4					" Ajusta a largura da coluna de números para 5 caracteres
+
+set foldcolumn=2					" Coluna fixa (para quando :set nonumber)
+highlight FoldColumn guibg=#222222			" Cor da coluna fixa
 
 set cursorline						" Linha do cursor
 highlight CursorLine guibg=#2e2e2e			" Cor da linha do cursor 
