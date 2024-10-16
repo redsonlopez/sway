@@ -72,9 +72,6 @@ set mouse=a
 "set list
 "set listchars=tab:»\ ,trail:·
 
-" Uma saida mais bonitinha
-"set confirm
-
 " Titulo
 "set title
 

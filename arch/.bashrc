@@ -26,8 +26,13 @@ shopt -s checkwinsize
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+PETROL="\[\033[0;38;5;67m\]"
+PETROL_LIGHT="\[\033[0;38;5;109m\]"
 ORANGE="\[\033[0;38;5;208m\]"
 YELLOW="\[\033[0;38;5;226m\]"
 RESET_COLOR="\[\033[0;0m\]"
-PS1="$ORANGE\w$YELLOW\$(parse_git_branch)$RESET_COLOR\$ "
+PS1="$PETROL_LIGHT\w$PETROL\$(parse_git_branch)$RESET_COLOR\$ "
+#PS1="$ORANGE\w$YELLOW\$(parse_git_branch)$RESET_COLOR\$ "
+
+export PATH="$HOME/.local/bin:$PATH"
 
