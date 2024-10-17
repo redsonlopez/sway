@@ -33,11 +33,17 @@ highlight FoldColumn guibg=#222222			" Cor da coluna fixa
 set cursorline						" Linha do cursor
 highlight CursorLine guibg=#2e2e2e			" Cor da linha do cursor 
 
+highlight Pmenu guibg=#808080 guifg=#000000		" Cor de fundo e texto do popup menu
+highlight PmenuSel guibg=#111111 guifg=#FFFFFF		" Cor do item selecionado no popup menu
+highlight PmenuSbar guibg=#808080			" Cor da barra de rolagem do popup menu
+highlight PmenuThumb guibg=#111111			" Cor do indicador da barra de rolagem
+
 " Desativar linhas não utilizadas no final do arquivo
 set fillchars=fold:\ ,eob:\ 
 
 " Mini barra
-set laststatus=0
+set laststatus=2
+highlight StatusLine guibg=#888888 guifg=#111111
 
 " Ativar suporte para o mouse
 set mouse=a
