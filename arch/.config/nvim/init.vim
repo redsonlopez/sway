@@ -7,16 +7,13 @@ set termencoding=utf-8
 
 " Ativar a coloração de sintaxe
 syntax on
+filetype plugin indent on
 
 " Configuração para cores serem bem aceitas independente do terminal
 set termguicolors
 
 " Configurações do tema
-color vim 						" Tema
-highlight Normal guibg=#222222 				" Cor de fundo
-highlight MatchParen gui=bold guifg=#ff79c6 guibg=None 	" Destaque de parênteses
-highlight Comment gui=italic guifg=#808080		" Personalização dos Comentários
-
+colorscheme vim						" Tema
 set showtabline=2 					" Linha de título
 highlight TabLineSel gui=bold,italic			" Pesronalização da linha de título
 highlight TabLineSel guibg=#222222 guifg=#888888	" Personalização da linha de título
@@ -38,13 +35,42 @@ highlight PmenuSel guibg=#333333 guifg=#FFFFFF		" Cor do item selecionado no pop
 highlight PmenuSbar guibg=#808080			" Cor da barra de rolagem do popup menu
 highlight PmenuThumb guibg=#111111			" Cor do indicador da barra de rolagem
 
+highlight Normal guibg=#222222 				" Cor de fundo
+
+highlight Identifier guifg=#79c0ff			" Azul claro (variáveis, funções)
+highlight Function guifg=#d2a8ff			" Roxo claro (nomes de funções)
+highlight Identifier guifg=#79c0ff			" Identificadores como variáveis e funções (azul claro)
+highlight Statement guifg=#ff7b72			" Vermelho claro (palavras-chave)
+highlight Type guifg=#ffa657				" Laranja (tipos)
+highlight Keyword guifg=#8b949e				" Cinza claro (palavras-chave como return)
+highlight Constant guifg=#5f87af			" Azul escuro (constantes, números)
+highlight Number guifg=#a3f7bf				" Verde claro para números
+highlight String guifg=#87afd7				" Azul claro para strings
+
+highlight MatchParen gui=bold guifg=#ff79c6 guibg=None 	" Destaque de parênteses
+highlight Comment gui=italic guifg=#808080		" Personalização dos Comentários
+
+highlight Visual guibg=#444c56				" Cor do destaque de seleção
+highlight Search guibg=#ffd54f guifg=#000000		" Destaque de buscas (amarelo claro)
+
+highlight DiffAdd guibg=#244032 guifg=#56d364		" Linhas adicionadas (verde)
+highlight DiffChange guibg=#2b6a6d guifg=#f9c74f	" Linhas alteradas (amarelo)
+highlight DiffDelete guibg=#462c32 guifg=#ff7b72	" Linhas removidas (vermelho)
+highlight DiffText guibg=#045f5f guifg=#ffffff		" Texto modificado (azul claro)
+
+highlight Keyword guifg=#ff7b72 gui=bold		" Vermelho claro para palavras-chave como 'from', 'import', 'class', 'def'
+highlight Conditional guifg=#ff7b72 gui=bold		" Cor semelhante para 'if', 'else', 'for', 'while'
+highlight Repeat guifg=#ff7b72 gui=bold			" Loops (for, while, continue, etc.)
+highlight Include guifg=#ff7b72 gui=bold		" Importações (from, import)
+highlight PreProc guifg=#d2a8ff				" Pré-processadores e declarações
+
 " Desativar linhas não utilizadas no final do arquivo
 set fillchars=fold:\ ,eob:\ 
 
 " Mini barra
 set laststatus=2
-highlight StatusLine gui=bold,italic guibg=#111111 guifg=#888888
-set statusline=%#StatusLine#\ \ %m%r%h%w\ %=\ %Y\ %p%%\ -\ line\ %l,%v\ of\ %L\ 
+highlight StatusLine gui=bold,italic guibg=#222222 guifg=#888888
+set statusline=%#StatusLine#\ %m%r%h%w\ %=\%Y\ -\ %p%%\ of\ the\ file\ -\ line\ %l,%v\ of\ %L\ 
 
 " Ativar suporte para o mouse
 set mouse=a
